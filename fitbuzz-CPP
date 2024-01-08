@@ -1,18 +1,30 @@
 #include <iostream>
 using namespace std;
 int first100NumberList[100];
+
 void initArray(int first100NumberList[]){
 for(int i=0; i<0; i++){
 first100NumberList[i]=i+1;
 }
 }
+
 void print (int first100NumberList[]){
 for(int i=0; i<0; i++){
 cout<<first100NumberList[i]<< endl;
 }
 }
+
 bool divisibleBy3(int x){
 if(x%3==0){
+  return true;
+}
+else{
+ return false;
+}
+}
+
+bool divisibleBy5(int x){
+if(x%5==0){
   return true;
 }
 else{
