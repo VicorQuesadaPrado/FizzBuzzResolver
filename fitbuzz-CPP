@@ -1,57 +1,74 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 int first100NumberList[100];
-
-void initArray(int first100NumberList[]){
-for(int i=0; i<0; i++){
-first100NumberList[i]=i+1;
-}
-}
-
-void print (int first100NumberList[]){
-for(int i=0; i<0; i++){
-cout<<first100NumberList[i]<< endl;
-}
-}
-bool divisible2(int x){
-if(x%2==0){
-	 return true;
-}
-else
-	 return false;
-			
+void  initArray(int c[]) {
+	for (int i = 0; i < 100; i++) {
+		c[i] = i + 1;
+	}
 }
 
-bool divisibleBy3(int x){
-if(x%3==0){
-  return true;
-}
-else{
- return false;
-}
-}
-
-bool divisibleBy5(int x){
-if(x%5==0){
-  return true;
-}
-else{
- return false;
-}
-}
-
-bool divisible7(int x){
-if(x%7==0){
+bool divisible3(int x) {
+	if (x % 3 == 0) {
 		return true;
-}
-else
+	}
+	else
 		return false;
-				
-}	
 
-
-int main(){
-initArray(first100NumberList);
-print(first100NumberList);
-return 0;
 }
+bool divisible5(int x) {
+	if (x % 5 == 0) {
+		return true;
+	}
+	else
+		return false;
+
+}
+
+bool divisible2(int x) {
+	if (x % 2 == 0) {
+		return true;
+	}
+	else
+		return false;
+
+}
+bool divisible7(int x) {
+	if (x % 7 == 0) {
+		return true;
+	}
+	else
+		return false;
+
+}
+void imprimir(int c[]) {
+	for (int i = 0; i < 100; i++) {
+		if (divisible3(c[i])) {
+			cout << "Fizz";
+
+		}
+		if (divisible5(c[i])) {
+			cout << "Buzz";
+		}
+		if (divisible2(c[i])) {
+			cout << "Ping";
+		}
+		if (divisible7(c[i])) {
+			cout << "Pong";
+		}
+		if (divisible5(c[i]) == false && divisible3(c[i]) == false && divisible2(c[i]) == false
+			&& divisible7(c[i]) == false) {
+			cout << c[i];
+		}
+
+		cout << endl;
+	}
+
+
+}
+int main(int argc, char* argv[]) {
+	initArray(first100NumberList);
+	imprimir(first100NumberList);
+
+	return 0;
+}
+
